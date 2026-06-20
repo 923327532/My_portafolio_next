@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Roberto Lopez Calle - Portafolio Profesional
 
-## Getting Started
+Portafolio web profesional construido con Next.js, TypeScript y Tailwind CSS.
 
-First, run the development server:
+## Stack Tecnologico
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js 16
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS v4
+- **Fuente**: Inter (Google Fonts)
+
+## Estructura del Proyecto
+
+```
+app/
+  page.tsx          # Pagina de inicio
+  about/page.tsx    # Sobre mi (CV completo)
+  projects/page.tsx # Proyectos
+  projects/[slug]/  # Detalle de proyecto
+  contact/page.tsx  # Contacto
+  sitemap.ts        # Sitemap dinamico SEO
+  robots.ts         # Robots.txt SEO
+  layout.tsx        # Layout raiz
+components/
+  Header.tsx        # Header premium con logo
+  Footer.tsx        # Footer 4 columnas
+  QuoteForm.tsx     # Formulario cotizacion WhatsApp
+  ProjectCard.tsx   # Card de proyecto
+  WhatsAppButton.tsx# Boton flotante WhatsApp
+lib/
+  data.ts           # Datos del portafolio (usa NEXT_PUBLIC_SITE_URL)
+types/
+  index.ts          # Interfaces TypeScript
+public/
+  logo.png          # Logo de marca
+  cv/               # CV descargable PDF
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Variables de Entorno
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Crear archivo `.env.local`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_SITE_URL=https://lopezdev.fun
+```
 
-## Learn More
+Para produccion en Vercel, agregar en Dashboard > Settings > Environment Variables:
+- `NEXT_PUBLIC_SITE_URL` = `https://lopezdev.fun`
 
-To learn more about Next.js, take a look at the following resources:
+## Despliegue en Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npx vercel deploy
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Luego en Vercel > Project > Domains agregar `lopezdev.fun` y configurar DNS.
 
-## Deploy on Vercel
+## Desarrollo Local
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install
+npm run dev
