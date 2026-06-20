@@ -69,7 +69,7 @@ export const personalInfo = {
   linkedin: 'https://www.linkedin.com/in/l%C3%B3pez2003',
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://lopezdev.fun',
   whatsapp: 'https://wa.link/0ftotp',
-  avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop',
+  avatar: '/logo.png',
   location: 'Lima, Peru',
   cvUrl: '/cv/LOPEZ_CALLE_ROBERTO_CV.pdf',
   fullBio: `Soy Roberto Carlos Lopez Calle, un desarrollador full-stack y emprendedor peruano con base en Lima, especializado en arquitectura de microservicios, APIs RESTful, bases de datos relacionales y despliegue en la nube.
@@ -111,19 +111,19 @@ Busco roles donde pueda aportar en arquitectura de software, backend avanzado, i
       name: 'AWS Certified Cloud Practitioner',
       issuer: 'Amazon Web Services',
       year: '2026',
-      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg',
+      image: 'https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white',
     },
     {
       name: 'Ciberseguridad Cisco',
       issuer: 'Cisco Networking Academy',
       year: '2023-2024',
-      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cisco/cisco-original.svg',
+      image: 'https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white',
     },
     {
       name: 'Ingles Britanico',
       issuer: 'British Institute',
       year: 'En Formacion',
-      image: '/icons/uk-flag.svg',
+      image: 'https://img.shields.io/badge/English-0052CC?style=for-the-badge&logo=googletranslate&logoColor=white',
     },
   ],
   skills: [
